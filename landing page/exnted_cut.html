@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>landing page</title>
+    <style>
+         @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;900&display=swap');
+*{
+    margin: 0px;
+    padding:0px;
+    box-sizing: border-box;
+    font-family: 'Merriweather', serif;
+
+}
+.hello
+{
+    min-height: 100vh;
+    background-image:linear-gradient(rgba(0,0,0,0.60),rgba(0,0,0,0.60)),url("img3.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.hi
+{
+    margin:auto;
+    width:85%;
+}
+nav
+{
+height: 80px;
+}
+nav h1{
+    float: left;
+    line-height: 80px;
+    font-size: 35px;
+    font-size: inline;
+    color: whitesmoke;
+}
+nav ul{
+    float:right;
+    line-height: 80px;
+}
+nav ul li{
+    display: inline-block;
+    list-style:none;
+    padding:0px 5px;
+}
+nav ul li a{
+ color:#fff;
+ text-decoration: none;
+ text-transform: uppercase;
+ border-radius: 5px;
+ padding:7px 8px;
+}
+nav ul li a:hover{
+background-color: orange;
+transition: 0.5s ease;
+}
+.a1{
+    width:50%;
+    margin:auto;
+    text-align: center;
+    transform: translateY(25vh);
+    color: #fff;
+}
+.a1 h1{
+    font-size: 36px;
+    color: #fff;
+    letter-spacing: 1.5px;
+    font-weight: 1000;
+    margin-bottom: 25px;
+}
+.a1 .id{
+    padding: 12px 25px;
+    color:black;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color: white;
+    border-radius: 10px;
+}
+.a1 .id:hover{
+    background-color:rgb(185, 183, 183);
+    transition: 0,.5s;
+}
+
+.main-block{
+    display: flex;
+    justify-content: space-evenly;
+    background-image: url("https://static.vecteezy.com/system/resources/previews/010/994/232/non_2x/nike-logo-black-clothes-design-icon-abstract-football-illustration-with-white-background-free-vector.jpg") ;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+}
+
+
+.main-text h1{
+    margin-top: 200px;
+    margin-left: 90px;
+    font-size: 40px;
+}
+
+.add-to{
+    display: flex;
+    justify-content: space-around;
+}
+
+.btn{
+    height: 30px;
+    width: 120px;
+    border-radius: 15px;
+    color: black;
+    background-color: white;
+}
+
+.btn:hover{
+    background-color:rgb(185, 183, 183);
+    transition: 0,.5s;
+
+}
+
+.main-text p{
+    margin-top: 20px;
+    margin-left: 50px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-bottom: 30px;
+}
+.models{
+    display:flex;
+    align-items: flex-end;
+    gap:50px;
+    max-height: 35vh;
+    height:100%;
+}
+.shop_container{
+   position:relative;
+   background: #cfcfcf;
+   width:200px;
+   height:100px;
+   border-radius: 40px;  
+   padding:80px 20px 0 20px;
+}
+.shop_container .img1{
+    width:30px;
+    height:1px;
+    position:absolute;
+    left:50%;
+    top:10%;
+    transform:translate(-50%,-50%) rotate(-40deg);
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+    <div class="hello">
+    <section>
+        <div class="hi">
+        <nav>
+        <h1>NIKE</h1>
+        <ul>
+            <li><a href="">HOME</a></li>
+            <li><a href="#main-block">MEN</a></li>
+            <li><a href="">WOMEN</a></li>
+            <li><a href="">KIDS</a></li>
+        </ul>
+    </nav>
+    <div class="a1"><h1>IT'S BETTER AS A MEMEBER</h1>
+    <p><h1>just do it</h1></p>
+    <form>
+        <a href="#main-block"><input type="submit" class="id" value="let's go"></a>
+    </form>
+     </div>
+    </div>
+    </section>
+    </div>
+    <div class="main-block" id="main-block">
+        <div class="main-text">
+            <h1>Nike Air Jordan</h1>
+            
+            <p>Nike Shoes E-commerce Website Shop Ludiflex, Nike introduces new
+                shoes Nike Air Jordan</p>
+            <div class="add-to">
+                <button class="btn">ADD to Cart</button>
+                <p>$197.99</p>
+            </div>
+            <div class="models">
+                <div class="shop_container">
+                <div class="price">
+                    <h1>nike air max</h1>
+                    <p>$179</p>
+                </div>
+                </div>
+            </div>
+        </div>
+        <div class="main-image">
+
+            <img src="https://static.nike.com/a/images/w_1536,c_limit,f_auto/053db59b-c55a-480f-84f6-07118f7660bb/air-jordan-1-high-og-blackred-release-date.png">
+        </div>
+    </div>
+    
+</div>
+</body>
+</html>
