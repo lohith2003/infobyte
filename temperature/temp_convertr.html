@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Temperature Converter</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: url('https://images.pexels.com/photos/531756/pexels-photo-531756.jpeg?cs=srgb&dl=pexels-pixabay-531756.jpg&fm=jpg') center/cover no-repeat;
+      text-align: center;
+      color: #fff; /* Set text color to white for better visibility on the background */
+    }
+
+    .container {
+      max-width: 400px;
+      margin: 50px auto;
+      background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background for the input area */
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    input {
+      width: 100%;
+      padding: 8px;
+      margin: 10px 0;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #4caf50;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    p {
+      color: #333;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Temperature Converter</h1>
+    <input type="number" id="temperatureInput" placeholder="Enter temperature">
+    <br>
+    <label for="conversionType">Choose conversion:</label>
+    <select id="conversionType">
+      <option value="toCelsius">Fahrenheit to Celsius</option>
+      <option value="toFahrenheit"> Celsius to Fahrenheit</option>
+    </select>
+    <br>
+    <button onclick="convert()">Convert</button>
+    <p id="result"></p>
+  </div>
+
+  <script>
+    function convert() {
+      var temperature = parseFloat(document.getElementById("temperatureInput").value);
+      var conversionType = document.getElementById("conversionType").value;
+      var result;
+
+      if (conversionType === "toCelsius") {
+        result = (temperature - 32) * (5 / 9);
+        document.getElementById("result").innerHTML = temperature + " Fahrenheit is " + result.toFixed(2) + " Celsius.";
+      } else {
+        result = (temperature * 9 / 5) + 32;
+        document.getElementById("result").innerHTML = temperature + " Celsius is " + result.toFixed(2) + " Fahrenheit.";
+      }
+    }
+  </script>
+
+</body>
+</html>
